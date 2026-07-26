@@ -33,8 +33,26 @@ h1, h2, h3 {
   font-weight: 800;
 }
 
+.display {
+  font-family: "Bebas Neue", "Poppins", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 0.95;
+}
+
+.section h2.display {
+  font-size: 2.6rem;
+}
+
 p {
   color: var(--color-text-muted);
+}
+
+.lead {
+  font-size: 1.1rem;
+  max-width: 640px;
+  margin-bottom: 2.5rem;
 }
 
 strong {
@@ -143,8 +161,7 @@ a {
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  line-height: 1.1;
+  font-size: 4rem;
   margin-bottom: 1.5rem;
   background: linear-gradient(135deg, #ffffff 40%, var(--color-accent));
   -webkit-background-clip: text;
@@ -234,6 +251,113 @@ a {
 
 .highlight-box p:last-child {
   margin-bottom: 0;
+}
+
+/* Activity tiles */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.tile {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.tile-soft {
+  background: var(--color-accent-soft);
+}
+
+.tile-num {
+  display: block;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3rem;
+  color: var(--color-accent);
+  opacity: 0.5;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.tile h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.tile p {
+  margin-bottom: 0;
+}
+
+/* Steps */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+}
+
+.step {
+  border-top: 2px solid var(--color-accent);
+  padding-top: 1rem;
+}
+
+.step-num {
+  display: block;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.6rem;
+  color: var(--color-accent);
+  margin-bottom: 0.4rem;
+}
+
+.step h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.step p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+/* CTA banner */
+.cta-banner {
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 1.5rem;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  box-shadow: none;
 }
 
 /* Training times */
@@ -424,5 +548,17 @@ a {
 
   .hero-list {
     justify-content: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .tile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-content h2 {
+    font-size: 2.2rem;
   }
 }

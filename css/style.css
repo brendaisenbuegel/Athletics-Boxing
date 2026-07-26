@@ -360,77 +360,15 @@ a {
   box-shadow: none;
 }
 
-/* Training times */
-.times-wrap {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  align-items: stretch;
-}
-
-.times-table {
-  flex: 1 1 380px;
-  border-collapse: separate;
-  border-spacing: 0;
-  color: var(--color-text);
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-}
-
-.times-table th,
-.times-table td {
-  padding: 1.1rem;
-  border-bottom: 1px solid var(--color-border);
-  border-right: 1px solid var(--color-border);
-}
-
-.times-table tr:last-child th,
-.times-table tr:last-child td {
-  border-bottom: none;
-}
-
-.times-table th:last-child,
-.times-table td:last-child {
-  border-right: none;
-}
-
-.times-table thead th {
-  background: var(--color-surface-2);
-  color: var(--color-accent);
-  text-align: center;
-}
-
-.times-table tbody th {
-  background: var(--color-surface-2);
-  color: var(--color-accent);
-  text-align: left;
-  width: 30%;
-}
-
-.times-table tbody td {
-  background: var(--color-surface);
-  text-align: center;
-}
-
-.hall-photo {
-  flex: 1 1 320px;
-  width: 100%;
-  max-width: 420px;
-  object-fit: cover;
-  border-radius: 16px;
-  border: 1px solid var(--color-border);
-}
-
-/* Contact */
-.contact-grid {
+/* Reusable info cards (training times, contact) */
+.info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
   margin-bottom: 2.5rem;
 }
 
-.contact-card {
+.info-card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-top: 3px solid var(--color-accent);
@@ -440,25 +378,54 @@ a {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.contact-card:hover {
+.info-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.6);
 }
 
-.contact-card h3 {
+.info-card h3 {
   color: var(--color-text);
   margin-bottom: 0.5rem;
 }
 
-.contact-card a {
+.info-card a {
   display: block;
   text-decoration: none;
   font-weight: 600;
   color: var(--color-text-muted);
 }
 
-.contact-card a:hover {
+.info-card a:hover {
   color: var(--color-accent);
+}
+
+/* Training times */
+.times-wrap {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.times-grid {
+  flex: 1 1 380px;
+  margin-bottom: 0;
+  align-content: start;
+}
+
+.info-card .time {
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.hall-photo {
+  flex: 1 1 320px;
+  width: 100%;
+  max-width: 420px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
 }
 
 .contact-form {
@@ -552,6 +519,10 @@ a {
 
   .hero-content h1 {
     font-size: 2.8rem;
+  }
+
+  .section h2.display {
+    font-size: 2.1rem;
   }
 
   .tile-grid {

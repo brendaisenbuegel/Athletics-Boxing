@@ -154,12 +154,15 @@
       </div>
     </div>
 
-    <form class="contact-form">
+    <form class="contact-form" action="https://formspree.io/nicole@athletics-boxing.de" method="POST">
+      <input type="hidden" name="_subject" value="Neue Nachricht über die Webseite">
+      <input type="hidden" name="_next" value="https://athletics-boxing.de/#kontakt">
+
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required>
 
       <label for="email">E-Mail</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="_replyto" required>
 
       <label for="nachricht">Nachricht</label>
       <textarea id="nachricht" name="nachricht" rows="5" required></textarea>

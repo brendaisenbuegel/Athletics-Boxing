@@ -236,6 +236,21 @@ a {
   margin-right: auto;
 }
 
+.legal-content h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+
+.legal-content h3:first-of-type {
+  margin-top: 0;
+}
+
+.legal-content p {
+  max-width: 700px;
+  margin-bottom: 1rem;
+}
+
 .highlight-box {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
